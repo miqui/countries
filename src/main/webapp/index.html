@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>REST Countries</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Information about countries via a RESTful API">
+<!-- bootstrap -->
+<link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootswatch/3.0.3/spacelab/bootstrap.min.css">
+<link rel="shortcut icon" href="img/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+	.rc-a-tryit {
+		cursor: pointer;
+	}
+	a {
+		text-decoration: none !important;
+	}
+	.paypal-button {
+		display: inline !important;
+	}
+</style>
+</head>
+<body>
+	<div id="rc-searchers" class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<h3>Get all the countries!</h3>
+				<div class="input-group">
+					<code>/rest/v1/all</code>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<h3> Currency</h3>
+				<div class="input-group">
+					<code>/rest/v1/currency/eur</code>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<h3> Country Code</h3>
+				<div class="input-group">
+					<code>/rest/v1/alpha/co</code>
+				</div>
+				<br />
+			</div>
+			<div class="col-lg-12">
+				<h3> Country Codes</h3>
+				<div class="input-group">
+					<code>/rest/v1/alpha?codes=co;rus;no</code>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<h3> Country Name Full Text</h3>
+				<div class="input-group">
+					<code>/rest/v1/name/Canada?fullText=true</code>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<!-- json preview -->
+			<div class="col-lg-11" style="margin-top: 10px;">
+				<div id="rc-json-well" class="well hidden"></div>
+			</div>
+
+			<div id="rc-warning" class="col-lg-11 hidden" style="margin-top: 10px;">
+       			<div class="alert alert-warning fade in">
+			        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+			        <strong>Holy guacamole!</strong> We don't have country data about that one =(
+				</div>
+        	</div>
+        	<div id="rc-error" class="col-lg-11 hidden" style="margin-top: 10px;">
+	        	<div class="alert alert-block alert-danger fade in">
+			        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+			        <h4>Well... you just broke it</h4>
+			        <p>I will greatly appreciate if you report a bug in either <a href="https://twitter.com/faydertvp">twitter</a> or <a href="https://github.com/fayder/restcountries/issues">github</a></p>
+			        
+			        
+				</div>
+			</div>
+		</div>
+	</div>
+	<br /><br />
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="//www.paypalobjects.com/js/external/paypal-button.min.js"></script>
+	<script src="js/restcountries.min.js"></script>
+
+</body>
+</html>

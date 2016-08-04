@@ -1,0 +1,5 @@
+applications:
+- name: countries
+  instances: 1
+  memory: 512M
+  path: target/countries-1.1.2.war
